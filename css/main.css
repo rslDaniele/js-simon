@@ -4,3 +4,24 @@
   box-sizing: border-box;
 
 }
+
+.container{
+  text-align: center;
+  margin-top: 200px;
+}
+
+
+h1{
+  margin: 50px;
+
+}
+
+button{
+  padding: 30px;
+  font-weight: bold;
+  background-color: lightblue;
+  border-radius: 20px;
+  border: 0px;
+  box-shadow: 20px;
+
+}

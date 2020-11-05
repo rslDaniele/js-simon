@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  alert("Benvenuto giocatore! Pronto a misurare la tua memoria?")
+  // alert("Benvenuto giocatore! Pronto a misurare la tua memoria?")
 
   var numeri = [];
 
@@ -20,16 +20,22 @@ $(document).ready(function () {
         console.log(ricorda);
       }
     }
+    document.getElementById('memory').innerHTML = ("Memorizza questi numeri, hai 5 secondi! " + numeri)
   }
 
-  generaNum(),
+  // AL CLICK DEL PULSANTE IL GIOCO GENERA ARRAY NUMERI
+
+  document.getElementById('play').addEventListener('click', generaNum);
   console.log(numeri);
 
-  alert("Concentrati! " + numeri);
+  // IL DIV CHE MOSTRA I NUMERI GENERATI SPARISCE
 
-  setTimeout(chiediNum, 10000);
+  $('.numeri').fadeOut(5000);
+
 
   // IL SISTEMA CHIEDE AL GIOCATORE DI RICORDARE I NUMERI
+
+  setTimeout(chiediNum, 10000);
 
   function chiediNum() {
 
