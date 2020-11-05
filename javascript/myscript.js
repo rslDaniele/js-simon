@@ -1,4 +1,4 @@
-setTimeout(chiediNum, 30000);
+setTimeout(chiediNum, 3000);
 
 alert("Benvenuto giocatore! Pronto a misurare la tua memoria?")
 
@@ -45,7 +45,16 @@ function chiediNum() {
 
     if (numeri.includes(guess)) {
       punteggio++;
-      console.log("Complimenti! Hai ottenuto " + punteggio + " punti!")
+
     }
+
   }
+  if (punteggio <= 2) {
+    console.log("Hmmm " + punteggio + " punti, dovremo lavorarci su...");
+  } else if (punteggio <= 4) {
+    console.log("Bella prova! Hai totalizzato " + punteggio + " punti!");
+  } else {
+    console.log("Eccezionale! Hai totalizzato " + punteggio + " punti su 5!");
+  }
+
 }
